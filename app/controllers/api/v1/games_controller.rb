@@ -5,7 +5,11 @@ class Api::V1::GamesController < ApplicationController
   def index
     @games = Game.all
 
-    render json: @games
+    render json: @games, except: [:created_at, :updated_at], include: {
+        genres: {
+            except: [:created_at, :updated_at]
+        }
+    }
   end
 
   
