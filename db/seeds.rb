@@ -6,11 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-gow = Game.create(name: "God of War", platform: "Playstation", release_month: "September")
+gow = Game.create(name: "God of War", platform: "Playstation")
 
-hellblade2 = Game.create(name: "Hellblade 2", platform: "Xbox", release_month: "October")
+hellblade2 = Game.create(name: "Hellblade 2", platform: "Xbox")
 
-redfall = Game.create(name: "Redfall", platform: "Xbox", release_month: "June")
+redfall = Game.create(name: "Redfall", platform: "Xbox")
 
 gow.genres.build(name: "Action")
 gow.genres.build(name: "Adventure")
