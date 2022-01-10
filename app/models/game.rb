@@ -1,5 +1,7 @@
 class Game < ApplicationRecord
-    has_many :genres
+    has_many :gamegenres
+    has_many :genres, through: :gamegenres
+    
 
     def genre_attributes=(genres_attributes)
         genres_attributes.each do |g|
