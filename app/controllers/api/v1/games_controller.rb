@@ -6,7 +6,7 @@ class Api::V1::GamesController < ApplicationController
     @games = Game.all
 
     render json: @games, except: [:created_at, :updated_at], include: {
-        genres: {
+        comments: {
             except: [:created_at, :updated_at]
         }
     }
@@ -28,7 +28,7 @@ class Api::V1::GamesController < ApplicationController
 
     if @game.save
       render json: @game, status: :created, location: api_v1_game_path(@game), except: [:created_at, :updated_at], include: {
-        genres: {
+        comments: {
             except: [:created_at, :updated_at]
         }
     }
@@ -58,7 +58,7 @@ class Api::V1::GamesController < ApplicationController
     end
 
     def game_params
-      params.require(:game).permit(:name, :platform, genre_attributes:[:name])
+      params.require(:game).permit(:name, :platform, comment_attributes:[:content])
     end
 
 end
