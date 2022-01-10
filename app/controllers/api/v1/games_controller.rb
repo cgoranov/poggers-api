@@ -25,11 +25,13 @@ class Api::V1::GamesController < ApplicationController
   def create
     
     @game = Game.new(game_params)
-    
-    byebug
 
     if @game.save
-      render json: @game, status: :created, location: api_v1_game_path(@game)
+      render json: @game, status: :created, location: api_v1_game_path(@game), except: [:created_at, :updated_at], include: {
+        genres: {
+            except: [:created_at, :updated_at]
+        }
+    }
     else
       render json: @game.errors, status: :unprocessable_entity
     end
