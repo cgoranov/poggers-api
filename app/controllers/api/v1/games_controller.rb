@@ -23,7 +23,10 @@ class Api::V1::GamesController < ApplicationController
 
   
   def create
+    
     @game = Game.new(game_params)
+    
+    byebug
 
     if @game.save
       render json: @game, status: :created, location: api_v1_game_path(@game)
@@ -53,7 +56,7 @@ class Api::V1::GamesController < ApplicationController
     end
 
     def game_params
-      params.require(:game).permit(:name, :platform, :release_month)
+      params.require(:game).permit(:name, :platform, :release_month, genre_attributes:[:name])
     end
 
 end
