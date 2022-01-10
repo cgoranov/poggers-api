@@ -14,7 +14,11 @@ class Api::V1::GamesController < ApplicationController
 
   
   def show
-    render json: @game
+    render json: @game, except: [:created_at, :updated_at], include: {
+        genres: {
+            except: [:created_at, :updated_at]
+        }
+    }
   end
 
   
