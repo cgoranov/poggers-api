@@ -48,7 +48,11 @@ class Api::V1::GamesController < ApplicationController
 
   
   def destroy
-    @game.destroy
+    if @game.destroy
+      render json: {message: "Successfully deleted", store: @store}
+    else
+      render json: {message: "Failed to delete"}
+    end
   end
 
   private
