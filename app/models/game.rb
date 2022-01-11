@@ -1,5 +1,7 @@
 class Game < ApplicationRecord
     has_many :comments
+    validates :name, presence: true
+    validates :name, uniqueness: true
 
     def comment_attributes=(comments_attributes)
         comments_attributes.each do |g|
