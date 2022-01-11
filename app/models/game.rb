@@ -1,9 +1,9 @@
 class Game < ApplicationRecord
     has_many :comments
 
-    def genre_attributes=(comments_attributes)
+    def comment_attributes=(comments_attributes)
         comments_attributes.each do |g|
-            comment = Comment.find_or_create_by(content: g["name"])
+            comment = Comment.create(content: g["content"])
             self.comments << comment
         end
     end
