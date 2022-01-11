@@ -25,7 +25,7 @@ class Api::V1::GamesController < ApplicationController
   def create
   
     @game = Game.new(game_params)
-
+    
     if @game.save
       render json:{status: 201, game: @game}, status: :created, location: api_v1_game_path(@game), except: [:created_at, :updated_at], include: {
         comments: {

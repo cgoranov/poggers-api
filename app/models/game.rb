@@ -1,8 +1,8 @@
 class Game < ApplicationRecord
     has_many :comments
     validates :name, presence: true
-    validates :name, uniqueness: true
-    before_save :downcase_name
+    validates :name, uniqueness: true   
+    before_validation :downcase_name
 
     def comment_attributes=(comments_attributes)
         comments_attributes.each do |g|
