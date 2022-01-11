@@ -27,13 +27,13 @@ class Api::V1::GamesController < ApplicationController
     @game = Game.new(game_params)
 
     if @game.save
-      render json: @game, status: :created, location: api_v1_game_path(@game), except: [:created_at, :updated_at], include: {
+      render json:{status: 201, game: @game}, status: :created, location: api_v1_game_path(@game), except: [:created_at, :updated_at], include: {
         comments: {
             except: [:created_at, :updated_at]
         }
     }
     else
-      render json: @game.errors, status: :unprocessable_entity
+        render json: {status: 422 , errors: @game.errors.full_messages.join(", ")}, status: :unprocessable_entity
     end
   end
 
