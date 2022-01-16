@@ -34,13 +34,13 @@ rails db:migrate
 rails s
 ```
 
-6. You are now all and can run your [frontend](https://github.com/cgoranov/poggers-frontend) as well!
+6. Your backend is now up and running, go ahead and run your [frontend](https://github.com/cgoranov/poggers-frontend) as well! Enjoy our application. 
 
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Please make sure to update tests as appropriate.
+Please make sure to update tests as appropriate. You may reach out to me at @cgoranov@gmail.com.
 
 ## License
 
