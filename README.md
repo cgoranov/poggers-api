@@ -8,7 +8,7 @@ Poggers was created with a JavaScript frontend and Ruby on Rails API backend. I 
 
 ## Local Installation
 
-1. Clone the the backend API repo:
+1. Clone the backend API repo:
 
 ```bash
 git clone https://github.com/cgoranov/poggers-api.git
