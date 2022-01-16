@@ -1,25 +1,49 @@
-# README
+# Poggers
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Poggers is a one page application for you to create a list for all your most anticipated games with comments about each game too, so you never miss a detail when you are on your gaming Podcast!
 
-Things you may want to cover:
+## Overview
 
-* Ruby version
+Poggers was created with a JavaScript frontend and Ruby on Rails API backend. I hope you enjoy!
 
-* System dependencies
+## Local Installation
 
-* Configuration
+1. Clone the the backend API repo:
 
-* Database creation
+Clone this repository: 
 
-* Database initialization
+```bash
+git clone https://github.com/cgoranov/poggers-api.git
+```
 
-* How to run the test suite
+2. Open the backend repository into your local IDE.
 
-* Services (job queues, cache servers, search engines, etc.)
+3. Inside the console run 'bundle install' to install the necessary Ruby Gems and dependencies:
 
-* Deployment instructions
+```bash
+bundle install
+```
 
-* ...
-# poggers-api
+4. Run the database migrations:
+
+```bash
+rails db:migrate
+```
+
+5. Start the local rails server:
+
+```bash
+rails s
+```
+
+6. You are now all set to run your frontend! 
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+
+The gem is available as open source under the terms of the MIT License. [MIT](https://choosealicense.com/licenses/mit/)
