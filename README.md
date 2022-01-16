@@ -10,8 +10,6 @@ Poggers was created with a JavaScript frontend and Ruby on Rails API backend. I 
 
 1. Clone the the backend API repo:
 
-Clone this repository: 
-
 ```bash
 git clone https://github.com/cgoranov/poggers-api.git
 ```
